@@ -1,4 +1,4 @@
-name: Build RusUstoz APK
+name: Build RusUstoz2 APK
 on:
   workflow_dispatch:
   push:
