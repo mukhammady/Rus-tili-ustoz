@@ -1,4 +1,4 @@
-name: Build RusUstoz2 APK
+name: Build RusUstozpro APK
 on:
   workflow_dispatch:
   push:
@@ -19,13 +19,13 @@ jobs:
         with:
           gradle-version: '8.7'
       - name: Unpack project ZIP
-        run: unzip -q RusUstoz-stage4.zip -d source
+        run: unzip -q RusUstoz-Pro-project.zip-d source
       - name: Build debug APK
         working-directory: source
         run: gradle assembleDebug
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: RusUstoz2.1-debug-apk
+          name: RusUstoz2pro1-debug-apk
           path: source/app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
